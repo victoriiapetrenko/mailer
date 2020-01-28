@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-mailer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="0.9.13">
+    <engines>
+        <engine name="cordova" version=">=3.7.0"/>
+        <engine name="cordova-windows" version=">=4.4.0"/>
+    </engines>
+    <name>MailerPlugin</name>
+    <description>Mailer cordova plugin for iOS 8.1 + 10</description>
+    <author>Victoria Petrenko</author>
+    <email></email>
+    <license>MIT</license>
+
+    <js-module src="www/mailer.js"
+               name="MailerPlugin">
+        <clobbers target="cordova.plugins.MailerPlugin"/>
+        <clobbers target="MailerPlugin"/>
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="MailerPlugin">
+                <param name="ios-package" value="Mailer"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MailerPlugin.h"/>
+        <source-file src="src/ios/MailerPlugin.m"/>
+
+        <framework src="UIKit.framework"/>
+        <framework src="Foundation.framework"/>
+        <framework src="MessageUI.framework"/>
+        <framework src="PDFKit.framework"/>
+
+    </platform>
+
+</plugin>
