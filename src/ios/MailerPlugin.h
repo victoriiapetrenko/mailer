@@ -7,9 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
 #import <Cordova/CDVPlugin.h>
 
 @interface MailerPlugin : CDVPlugin
@@ -18,5 +15,3 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)sendMail:(CDVInvokedUrlCommand*)command;
 
 @end
-
-NS_ASSUME_NONNULL_END

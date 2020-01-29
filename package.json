@@ -1,0 +1,59 @@
+{
+  "_args": [
+    [
+      "cordova.plugins.mailerplugin@1.0.0",
+      "/Users/developer/Projects/mailer_native/MailerPlugin"
+    ]
+  ],
+  "_from": "cordova.plugins.mailerplugin@1.0.0",
+  "_id": "cordova.plugins.mailerplugin@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-gRYdXnFpUtprpSlcTF1cMZ7W9Gg=",
+  "_location": "/cordova.plugins.mailerplugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova.plugins.mailerplugin@1.0.0",
+    "name": "cordova.plugins.mailerplugin",
+    "escapedName": "cordova.plugins.mailerplugin",
+    "rawSpec": "1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "1.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/de.sitewaerts.cordova.documentviewer/-/de.sitewaerts.cordova.documentviewer-0.2.2.tgz",
+  "_spec": "1.0.0",
+  "_where": "/Users/developer/Projects/mailer_native/MailerPlugin",
+  "author": {
+    "name": "Victoria Petrenko"
+  },
+  "bugs": {
+    "url": "https://github.com/emilhuseynli/cordova-plugin-document-viewer/issues"
+  },
+  "cordova": {
+    "id": "cordova.plugins.mailerplugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "description": "[Outdated] Document viewer phonegap plugin.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.6.0"
+    }
+  ],
+  "homepage": "https://github.com/victoriiapetrenko/mailer#readme",
+  "keywords": [],
+  "license": "MIT",
+  "name": "cordova.plugins.mailerplugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victoriiapetrenko/mailer.git.git"
+  },
+  "version": "1.0.0"
+}
