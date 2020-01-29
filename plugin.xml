@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-mailer"
+        id="cordova.plugins.mailerplugin"
         xmlns:android="http://schemas.android.com/apk/res/android"
         version="0.9.13">
     <engines>
@@ -13,16 +13,16 @@
     <email></email>
     <license>MIT</license>
 
-    <js-module src="www/mailer.js"
+    <js-module src="www/MailerPlugin.js"
                name="MailerPlugin">
-        <clobbers target="cordova.plugins.MailerPlugin"/>
+        <clobbers target="cordova.plugins.mailerplugin"/>
         <clobbers target="MailerPlugin"/>
     </js-module>
 
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="MailerPlugin">
-                <param name="ios-package" value="Mailer"/>
+                <param name="ios-package" value="MailerPlugin"/>
             </feature>
         </config-file>
 
