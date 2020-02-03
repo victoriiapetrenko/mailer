@@ -33,15 +33,29 @@
         if (@available(iOS 11.0, *)) {
             PDFDocument *pdfDocument = [[PDFDocument alloc] initWithData:fileData];
             NSInteger pagesCount = [pdfDocument pageCount];
+            
+            PDFDocument *newPdfDocument;
+            
             for (NSInteger index = 0; index < pagesCount; index++) {
                 NSInteger page = index+1;
                 BOOL containsPage = [pages containsObject:@(page)];
-                if (!containsPage) {
-                    [pdfDocument removePageAtIndex:index];
+                if (containsPage) {
+                    PDFPage *page = [pdfDocument pageAtIndex:index];
+                    if (page) {
+                        if (!newPdfDocument) {
+                            //Create new pdf document with single page
+                            NSData *firstPageData = [page dataRepresentation];
+                            if (firstPageData) {
+                                newPdfDocument = [[PDFDocument alloc] initWithData:firstPageData];
+                            }
+                        } else {
+                            [newPdfDocument insertPage:page atIndex:index];
+                        }
+                    }
                 }
             }
-            BOOL writed = [pdfDocument writeToFile:storedPath];
-            NSLog(@"Document writed");
+            BOOL writed = [newPdfDocument writeToFile:storedPath];
+            NSLog(@"Document writed - %@", [NSNumber numberWithBool:writed]);
         }
     }
     return storedPath;
