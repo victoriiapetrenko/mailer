@@ -15,7 +15,7 @@
 
     <js-module src="www/MailerPlugin.js"
                name="MailerPlugin">
-        <clobbers target="cordova.plugins.mailerplugin"/>
+        <clobbers target="cordova.plugins.MailerPlugin"/>
         <clobbers target="MailerPlugin"/>
     </js-module>
 
