@@ -1,9 +1,8 @@
-cordova.define("cordova.plugins.mailerplugin.MailerPlugin", function(require, exports, module) {
 //  cordova-plugin-mailer
 //
 //  Created by Victoria Petrenko 2020/01/28
 //
-//  Copyright 2020 sitewaerts GmbH. All rights reserved.
+//  Copyright 2020 GmbH. All rights reserved.
 //  MIT Licensed
 
 /*  configuration   */
@@ -85,4 +84,3 @@ var MailerPlugin = {
 }
 
 module.exports = MailerPlugin;
-});
