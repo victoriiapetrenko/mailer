@@ -49,7 +49,8 @@
                                 newPdfDocument = [[PDFDocument alloc] initWithData:firstPageData];
                             }
                         } else {
-                            [newPdfDocument insertPage:page atIndex:index];
+                            NSInteger newIndex = [newPdfDocument pageCount];
+                            [newPdfDocument insertPage:page atIndex:newIndex];
                         }
                     }
                 }
